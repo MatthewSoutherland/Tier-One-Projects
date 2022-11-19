@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="styles.css">
+  <title>Document</title>
+</head>
+  <body>
+    <div id="container" class="col">
+      <div id="header">
+        <h1>25 + 5 CLOCK</h1>
+      </div>
+      <div class="label-container">
+        <div id="break-label" class="small-containers">
+          <h4>Break Length</h4>
+          <div class="row">
+            <h2 class="select" id="break-increment" onclick={breakInc()}> + </h2>
+            <h4 id="break-length">5</h4>
+            <h2 class="select" id="break-decrement" onclick={breakDec()}> - </h2>
+          </div>
+        </div>
+        <div id="session-label" class="small-containers">
+          <h4>Session Length</h4>
+          <div class="row">
+            <h2 class="select" id="session-increment" onclick={sessionInc()}> + </h2>
+            <h4 id="session-length">25</h4>
+            <h2 class="select" id="session-decrement" onclick={sessionDec()}> - </h2>
+          </div>
+        </div>
+      </div>
+      <div id="timer-container">
+        <h2 id="timer-label">SESSION</h2>
+        <h1 id="time-left">25:00</h1>
+      </div>
+      <div id="button-container">
+        <img id="start_stop" class="buttons" src="play.jpeg" alt="play">
+        <img onclick={refreshFun()} id="reset" class="buttons" src="refresh.jpeg" alt="refresh">
+        <!-- <img  id="stop" class="buttons" src="stop.jpeg" alt="stop"> -->
+      </div>
+    </div>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    <script src="clock.js"></script>
+  </body>
+</html>
